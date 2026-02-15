@@ -43,6 +43,7 @@ public class UniqueLastNames {
                 .distinct()
                 .sorted()
                 .reduce("", (previous, current) -> previous + "\n" + current);
+
         System.out.println(uniqueLastNames);
     }
 }
