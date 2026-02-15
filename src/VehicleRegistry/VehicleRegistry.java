@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class VehicleRegistry {
-    HashMap<LicensePlate, String> owners;
+    HashMap <LicensePlate, String> owners;
 
     public VehicleRegistry() {
         this.owners = new HashMap<>();
