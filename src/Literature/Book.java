@@ -1,0 +1,19 @@
+package Literature;
+
+public class Book {
+    private final String name;
+    private final int ageRec;
+
+    public Book(String name, int ageRec) {
+        this.name = name;
+        this.ageRec = ageRec;
+    }
+
+        public String getName() {
+            return this.name;
+        }
+
+        public int getAgeRec() {
+            return this.ageRec;
+        }
+}
