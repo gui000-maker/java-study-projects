@@ -19,8 +19,8 @@ public class Bookshelve {
     }
 
     public void printBooks() {
-        for (Book book : this.books) {
-            System.out.println(book.getName() + " (recommended for " + book.getAgeRec() + " year-olds or older)");
-        }
+        books.stream()
+                .sorted()
+                .forEach(book -> System.out.println(book.getName() + " (recommended for " + book.getAgeRec() + " year-olds or older)"));
     }
 }
