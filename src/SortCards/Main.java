@@ -1,16 +1,16 @@
 package SortCards;
 
 public class Main {
+    static void main() {
+        Hand hand = new Hand();
 
-    public static void main(String[] args) {
-        // test your code here
+        hand.add(new Card(2, Suit.DIAMOND));
+        hand.add(new Card(14, Suit.SPADE));
+        hand.add(new Card(12, Suit.HEART));
+        hand.add(new Card(2, Suit.SPADE));
 
-        Card first = new Card(2, Suit.DIAMOND);
-        Card second = new Card(14, Suit.SPADE);
-        Card third = new Card(12, Suit.HEART);
+        hand.sort();
 
-        System.out.println(first);
-        System.out.println(second);
-        System.out.println(third);
+        hand.print();
     }
 }
