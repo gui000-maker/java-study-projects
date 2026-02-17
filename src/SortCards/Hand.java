@@ -26,6 +26,10 @@ public class Hand implements Comparable<Hand> {
         Collections.sort(cards);
     }
 
+    public void sortBySuit() {
+        cards.sort(new SortBySuit().thenComparing(new BySuitInValueOrder()));
+    }
+
     public void sortBySuitInValueOrder() {
         cards.sort(new BySuitInValueOrder());
     }
