@@ -1,4 +1,4 @@
-package Mooc.ui;
+package mooc.ui;
 
 public class TextInterface implements UserInterface {
 
