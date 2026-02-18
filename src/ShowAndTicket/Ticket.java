@@ -8,5 +8,10 @@ public class Ticket {
 
     public Ticket(Show show) {
         this.show = show;
+        this.quantity++;
+    }
+
+    public void moreTicket() {
+        this.quantity++;
     }
 }
