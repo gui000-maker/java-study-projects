@@ -6,7 +6,7 @@ public class TemperatureSensor implements Sensor {
     private boolean state;
 
     public TemperatureSensor() {
-        this.state = true;
+        this.state = false;
     }
 
     @Override
