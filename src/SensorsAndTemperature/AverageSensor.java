@@ -8,7 +8,7 @@ public class AverageSensor implements Sensor {
 
     @Override
     public boolean isOn() {
-        for (Sensor sensor : this.Sensors) {
+        for (Sensor sensor : Sensors) {
             if (!sensor.isOn()) {
                 return false;
             }
@@ -18,21 +18,21 @@ public class AverageSensor implements Sensor {
 
     @Override
     public void setOn() {
-        for (Sensor sensor : this.Sensors) {
+        for (Sensor sensor : Sensors) {
             sensor.setOn();
         }
     }
 
     @Override
     public void setOff() {
-        for (Sensor sensor : this.Sensors) {
+        for (Sensor sensor : Sensors) {
             sensor.setOff();
         }
     }
 
     @Override
     public int read() {
-        for (Sensor sensor : this.Sensors) {
+        for (Sensor sensor : Sensors) {
             if (!sensor.isOn()) {
                 throw new IllegalStateException("One or more of the sensors is off");
             }
@@ -43,7 +43,7 @@ public class AverageSensor implements Sensor {
         }
 
         int sum = 0;
-        for (Sensor sensor : this.Sensors) {
+        for (Sensor sensor : Sensors) {
             sum += sensor.read();
         }
 
