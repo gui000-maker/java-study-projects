@@ -2,6 +2,7 @@ package DictionaryWrite;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -74,10 +75,9 @@ public class SaveableDictionary {
     public boolean save() {
         File file = new File(this.file);
 
-        try (Scanner fileScanner = new Scanner(file)) {
+        try (PrintWriter writer = new PrintWriter(file)) {
             for (Map.Entry<String, String> entry : dictionary.entrySet()) {
-                String line = entry.getKey() + ":" + entry.getValue();
-                System.out.println(line);
+                writer.println(entry.getKey() + ":" + entry.getValue());
             }
             return true;
         } catch (FileNotFoundException e) {
