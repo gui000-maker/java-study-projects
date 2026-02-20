@@ -2,7 +2,7 @@ package Hideout;
 
 public class Main {
     static void main() {
-        Hideout<Integer> den = new Hideout<>();
+        Hideout<Integer> den = new Hideout<Integer>();
         System.out.println(den.isInHideout());
         den.putIntoHideout(1);
         System.out.println(den.isInHideout());
