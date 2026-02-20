@@ -2,17 +2,11 @@ package DictionaryWrite;
 
 public class Main {
     static void main() {
-        SaveableDictionary dictionary = new SaveableDictionary();
-        dictionary.add("apina", "monkey");
-        dictionary.add("banaani", "banana");
-        dictionary.add("ohjelmointi", "programming");
-        dictionary.delete("apina");
-        dictionary.delete("banana");
+        SaveableDictionary dictionary = new SaveableDictionary("src/DictionaryWrite/words.txt");
+        dictionary.load();
 
-        System.out.println(dictionary.translate("apina"));
-        System.out.println(dictionary.translate("monkey"));
-        System.out.println(dictionary.translate("banana"));
-        System.out.println(dictionary.translate("banaani"));
-        System.out.println(dictionary.translate("ohjelmointi"));
+// use the dictionary
+
+        dictionary.save();
     }
 }
