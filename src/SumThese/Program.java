@@ -21,7 +21,7 @@ public class Program {
 
         int sum = 0;
         for (int i = fromWhere; i < toWhere; i++) {
-            if (array[i] >= smallest || array[i] <= largest) {
+            if (array[i] >= smallest && array[i] <= largest) {
                 sum += array[i];
             }
         }
