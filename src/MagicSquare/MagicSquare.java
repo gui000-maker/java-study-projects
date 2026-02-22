@@ -48,16 +48,16 @@ public class MagicSquare {
     public ArrayList<Integer> sumsOfDiagonals() {
         ArrayList<Integer> sums = new ArrayList<>();
 
-        int sum = 0;
-        for (int rc = 0; rc < square.length; rc++) {
-                sum += square[rc][rc];
-            }
-        sums.add(sum);
+        int sum1 = 0;
+        int sum2 = 0;
 
-        for (int rc = square.length; rc > 0; rc--) {
-                sum += square[rc][rc];
-            }
-        sums.add(sum);
+        for (int index = 0; index < square.length; index++) {
+            sum1 += square[index][index];
+            sum2 += square[index][square[0].length - 1 - index];
+        }
+
+        sums.add(sum1);
+        sums.add(sum2);
 
         return sums;
     }
