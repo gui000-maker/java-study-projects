@@ -6,7 +6,30 @@ public class MagicSquareFactory {
 
         MagicSquare square = new MagicSquare(size);
 
-        // implement the creation of a magic square with the Siamese method algorithm here
+            int number = 1;
+            int row = 0;
+            int col = size / 2;
+
+            while (number <= size * size) {
+                square.square[row][col] = number;
+
+                if (number % size == 0) {
+                    row++;
+                } else {
+                    row--;
+                    col++;
+                }
+
+                if (row < 0) {
+                    row = size - 1;
+                }
+
+                if (col == size) {
+                    col = 0;
+                }
+
+                number++;
+            }
         return square;
     }
 

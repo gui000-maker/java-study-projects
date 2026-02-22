@@ -5,7 +5,7 @@ import java.util.Collections;
 
 public class MagicSquare {
 
-    private int[][] square;
+    int[][] square;
 
     // ready constructor
     public MagicSquare(int size) {
@@ -34,7 +34,7 @@ public class MagicSquare {
     public ArrayList<Integer> sumsOfColumns() {
         ArrayList<Integer> sums = new ArrayList<>();
 
-        for (int col = 0; col < square[col].length; col++) {
+        for (int col = 0; col < square[col].length - 1; col++) {
             int sum = 0;
             for (int row = 0; row < square.length; row++) {
                 sum += square[row][col];
